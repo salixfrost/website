@@ -48,3 +48,34 @@ h6 {
   -webkit-clip-path: polygon(0 0.125rem, 100% 2rem, 100% 100%, 0 calc(100% - 1.25rem));
           clip-path: polygon(0 0.125rem, 100% 2rem, 100% 100%, 0 calc(100% - 1.25rem));
 }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem !important; }
+  h2 { font-size: 1.75rem !important; }
+  
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  
+  .text-lg { font-size: 1rem; }
+  
+  .text-3xl { font-size: 1.5rem; }
+  .text-4xl { font-size: 1.75rem; }
+  .text-5xl { font-size: 2.5rem; }
+  
+  aside { margin-left: 0 !important; margin-top: 1.5rem; }
+  
+  figure img { width: 80px !important; height: 80px !important; }
+  
+  .p-8 { padding: 1.25rem !important; }
+  .py-4 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+  .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  
+  .bass-1, .bass-2, .bass-3 {
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+  
+  .bass-vert-only {
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+}
