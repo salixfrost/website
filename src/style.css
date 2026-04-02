@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cabin: Cabin, sans-serif;
+  --font-bassanova: "Bassanova W03 Regular", sans-serif;
+}
+
+@font-face {
+  font-family: "Bassanova W03 Regular";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/746001/598766aa-1b77-4518-abb1-ce6be0451d27.eot?#iefix");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/746001/598766aa-1b77-4518-abb1-ce6be0451d27.eot?#iefix") format("eot"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/746001/2ad3a7eb-b199-47e5-a40f-a234d82a05d2.woff2") format("woff2"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/746001/df4e07cb-84d6-4b39-9da2-032ed42d5760.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/746001/4e9b153c-2ce2-4780-9e82-de46b01ff111.ttf") format("truetype");
+}
+
+body {
+  font-family: var(--font-cabin);
+  background-color: #f4ecd8;
+}
+
+.concrete-wall {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/746001/concrete-wall.png);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-bassanova);
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+.bass {
+  transition: all 0.25s;
+}
+
+.bass:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.bass-1 {
+  clip-path: polygon(0.25rem 0.75rem, 100% 0.5rem, calc(100% - 0.5rem) calc(100% - 0.25rem), 0.8587897rem calc(100% - 1rem));
+}
+
+.bass-2 {
+  clip-path: polygon(1rem 0.75rem, calc(100% - 0.5rem) 0.5rem, calc(100% - 0.15rem) calc(100% - 0.25rem), 0.25rem calc(100% - 1rem));
+}
+
+.bass-3 {
+  clip-path: polygon(0.25rem 0.125rem, calc(100% - 0.25rem) 0.5rem, calc(100% - 0.15rem) calc(100% - 0.25rem), 0.25rem calc(100% - 0.125rem));
+}
+
+.bass-vert-only {
+  clip-path: polygon(0 0.125rem, 100% 2rem, 100% 100%, 0 calc(100% - 1.25rem));
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem !important; }
+  h2 { font-size: 1.75rem !important; }
+  
+  .text-lg { font-size: 1rem; }
+  
+  .text-3xl { font-size: 1.5rem; }
+  .text-4xl { font-size: 1.75rem; }
+  .text-5xl { font-size: 2.5rem; }
+  
+  aside { margin-left: 0 !important; margin-top: 1.5rem; }
+  
+  figure img { width: 80px !important; height: 80px !important; }
+  
+  .p-8 { padding: 1.25rem !important; }
+  .py-4 { padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; }
+  .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  
+  .bass-1, .bass-2, .bass-3 {
+    clip-path: none;
+  }
+  
+  .bass-vert-only {
+    clip-path: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
